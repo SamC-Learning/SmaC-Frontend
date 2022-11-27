@@ -20,7 +20,7 @@ export default function Header() {
     <div className="flex items-center dark:bg-white bg-headerBGLight">
       <div className="flex-1">
         {theme === "light" ? (
-          <img src={logoIcon} alt="logo" className="my-5 ml-24 h-[35px]" />
+          <img src={logoIcon} alt="logo" className="my-5 ml-24 h-[30px]" />
         ) : (
           <img
             src={logoInLightIcon}
@@ -32,9 +32,9 @@ export default function Header() {
 
       <button
         style={{ textTransform: "none" }}
-        className="text-fontButtonPink font-bold text-base bg-buttonBg py-4 px-3 rounded-[13px]"
+        className="text-fontButtonPink font-normal text-sm bg-buttonBg py-3 px-3 rounded-[10px]"
       >
-        Contact us
+        Contact Admin
       </button>
 
       <Button onClick={handleTheme}>
@@ -45,7 +45,7 @@ export default function Header() {
 
       <Avatar
         src="https://assets-prd.ignimgs.com/2022/09/20/iron-man-motive-button-1663693168356.jpg"
-        sx={{ width: "64px", height: "64px" }}
+        sx={{ width: "48px", height: "48px" }}
         className="mr-12"
       />
     </div>
