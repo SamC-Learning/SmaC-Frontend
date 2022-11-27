@@ -17,7 +17,7 @@ export default function Header() {
     theme === "dark" ? setTheme("light") : setTheme("dark");
 
   return (
-    <div className="flex items-center dark:bg-white bg-headerBGLight">
+    <div className="fixed z-10 w-full flex items-center dark:bg-white bg-headerBGLight">
       <div className="flex-1">
         {theme === "light" ? (
           <img src={logoIcon} alt="logo" className="my-5 ml-24 h-[30px]" />
