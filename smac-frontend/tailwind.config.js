@@ -8,6 +8,8 @@ module.exports = {
         fontButtonPink: "#F19CFF",
         buttonBg: "#060B1D",
         headerBGLight: "#53504D",
+        backGround:"#262626",
+        border:"#36415F"
       },
     },
   },
