@@ -4,46 +4,24 @@ import React from "react";
 import ReactStickyNotes from "@react-latest-ui/react-sticky-notes";
 import Calender from "../calender/Calender";
 import moretab from "../icons/moretab.svg";
-// import Chart from "react-apexcharts";
 
-// import ApexCharts from "apexcharts";
+import classes from "../icons/class.svg";
+import disabled from "../icons/disabled.svg";
+import assignyellow from "../icons/assignyellow.svg";
 
-// const activitydata = [
-//   {
-//     options: {
-//       chart: {
-//         id: "basic-bar",
-//       },
-//       xaxis: {
-//         categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
-//       },
-//     },
-//     series: [
-//       {
-//         name: "series-1",
-//         data: [30, 40, 45, 50, 49, 60, 70, 91],
-//       },
-//     ],
-//   },
-// ];
+import ActivityChart from "../activitychart/ActivityChart";
 
 export default function Home() {
   const Activity = () => {
     return (
       <div className="w-2/3">
-        <div className="flex">
+        <div className="flex relative">
           <p className="font-semibold text-xl text-white mb-5">Activity</p>
-          <button className="mb-3">
+          <button className="mt-2 absolute -right-36">
             <img src={moretab} alt="logo" />
           </button>
         </div>
-
-        {/* <Chart
-          options={activitydata.options}
-          series={activitydata.series}
-          type="line"
-          width="500"
-        /> */}
+        <ActivityChart />
       </div>
     );
   };
@@ -51,7 +29,38 @@ export default function Home() {
   const Statistics = () => {
     return (
       <div>
-        <p className="font-semibold text-xl text-white mb-5">Statistics</p>
+        <div className="flex relative">
+          <p className="font-semibold text-xl text-white mb-5">Statistics</p>
+          <button className="mt-2 absolute right-36">
+            <img src={moretab} alt="logo" />
+          </button>
+        </div>
+        <div className="flex">
+          <div className="shadow-md mr-12 rounded-3xl bg-headerBGLight py-5 pl-7 w-1/4 pr-20">
+          <img src={classes} alt="logo"/>
+            <p className="font-semibold text-base text-white mt-2 mb-2">72</p>
+            <p className="font-semibold text-xs text-cardText">Total Classes</p>
+            <p className="font-semibold text-xs text-green-600 mt-3">
+              12 <span className="text-cardText ml-3">Last Week</span>
+            </p>
+          </div>
+          <div className="bg-headerBGLight mr-12 rounded-3xl py-5 pl-7 w-1/4 pr-20">
+          <img src={disabled} alt="logo"/>
+            <p className="font-semibold text-base text-white mt-2 mb-2">72</p>
+            <p className="font-semibold text-xs text-cardText">Total times disabled</p>
+            <p className="font-semibold text-xs text-purple-500 mt-3">
+              12 <span className="text-cardText ml-3">Last Week</span>
+            </p>
+          </div>
+          <div className="bg-headerBGLight mr-12 rounded-3xl py-5 pl-7 w-1/4 pr-20">
+          <img src={assignyellow} alt="logo"/>
+            <p className="font-semibold text-base text-white mt-2 mb-2">72</p>
+            <p className="font-semibold text-xs text-cardText">Assignments</p>
+            <p className="font-semibold text-xs text-yellow-500 mt-3">
+              12 <span className="text-cardText ml-3">Last Week</span>
+            </p>
+          </div>
+        </div>
       </div>
     );
   };
