@@ -66,7 +66,7 @@ export default function Assignments() {
               width: "245px",
               textAlign: "left",
             }}
-            endIcon={<img src={AttachIcon}/>}
+            endIcon={<img src={AttachIcon} alt="rishi"/>}
           >
             Attachment
           </Button>
