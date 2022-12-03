@@ -6,6 +6,14 @@ import AttachIcon from "../icons/attachIcon.svg";
 
 const filterMenuOptions = ["All", "Assigned", "Completed", "Due"];
 
+const styleButton = {
+  backgroundColor: "#454545",
+  color: "white",
+  marginTop: "24px",
+  textTransform: "none",
+  textAlign: "left",
+};
+
 export default function Assignments() {
   // option came from Backend
   const subjectOption = ["Devops", "ElectricCircuits", "EMFT", "Aids"];
@@ -58,41 +66,30 @@ export default function Assignments() {
           />
           <Button
             style={{
-              backgroundColor: "#454545",
-              color: "white",
-              marginTop: "24px",
-              borderRadius: "30px",
-              textTransform: "none",
-              width: "245px",
-              textAlign: "left",
+              ...styleButton,
+              ...{ borderRadius: "30px", width: "245px" },
             }}
-            endIcon={<img src={AttachIcon} alt="rishi"/>}
+            endIcon={<img src={AttachIcon} alt="rishi" />}
           >
             Attachment
           </Button>
           <div className="flex gap-10 mt-4">
             <Button
               style={{
-                backgroundColor: "black",
-                color: "white",
-                marginTop: "24px",
-                borderRadius: "15px",
-                textTransform: "none",
-                textAlign: "left",
-                padding:"8px 40px 8px 40px"
+                ...styleButton,
+                ...{ borderRadius: "15px", padding: "8px 40px 8px 40px",  backgroundColor: "black" }
               }}
-            >Hand-In</Button>
+            >
+              Hand-In
+            </Button>
             <Button
               style={{
-                backgroundColor: "#454545",
-                color: "white",
-                marginTop: "24px",
-                borderRadius: "15px",
-                textTransform: "none",
-                textAlign: "left",
-                padding:"8px 40px 8px 40px"
+                ...styleButton,
+                ...{ borderRadius: "15px", padding: "8px 40px 8px 40px" },
               }}
-            >Cancel</Button>
+            >
+              Cancel
+            </Button>
           </div>
         </div>
       </div>
