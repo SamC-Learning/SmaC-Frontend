@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import cx from "classnames";
 
@@ -11,19 +11,17 @@ import docs from "../icons/docs.svg";
 import assignments from "../icons/assignments.svg";
 import smactab from "../icons/smactab.svg";
 
+const sideBarMenuOption = [
+  { title: "dashboard", Icon: dashboard },
+  { title: "classroom", Icon: classroom },
+  { title: "messages", Icon: messages },
+  { title: "docs", Icon: docs },
+  { title: "assignments", Icon: assignments },
+  { title: "smactab", Icon: smactab },
+];
+
 export default function Sidebar() {
-  const sideBarMenuOption = [
-    { title: "dashboard", Icon: dashboard },
-    { title: "classroom", Icon: classroom },
-    { title: "messages", Icon: messages },
-    { title: "docs", Icon: docs },
-    { title: "assignments", Icon: assignments },
-    { title: "smactab", Icon: smactab },
-  ];
-
-  const [menuOption, setMenuOption] = useState("dashboard");
-
-  const handleOptionChange = (option) => setMenuOption(option);
+  const locationString = useLocation().pathname;
 
   return (
     <div className="min-h-screen flex flex-wrap items-center bg-backGround dark:bg-white pr-10">
@@ -33,9 +31,8 @@ export default function Sidebar() {
             <button
               className={cx(
                 "hover:bg-backGround mx-3.5 p-3 rounded-md",
-                menuOption === title && "bg-docSkeleton"
+                locationString.includes(title) && "bg-docSkeleton"
               )}
-              onClick={() => handleOptionChange(title)}
             >
               <img src={Icon} alt="logo" />
             </button>
