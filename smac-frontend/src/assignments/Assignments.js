@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default function Assignments() {
   const menuOptions = [];
@@ -18,7 +18,12 @@ export default function Assignments() {
           ))}
         </div>
         <div className="flex-1 bg-docOptions rounded-3xl mt-3 p-10 mr-14">
-{[...Array(8)].map(item=><div key={item} className="rounded-full bg-docSkeleton h-10 w-1/2 mb-5"/>)}
+          {[...Array(8)].map((item) => (
+            <div
+              key={item}
+              className="rounded-full bg-docSkeleton h-10 w-1/2 mb-5"
+            />
+          ))}
         </div>
       </div>
     </div>
