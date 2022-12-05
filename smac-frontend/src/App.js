@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import Header from "./header/Header";
 import Home from "./home/Home";
@@ -15,16 +15,23 @@ function App() {
       <Header />
       <div className="flex">
         <Sidebar />
-        {/* <BrowserRouter> */}
-        {/* <Switch> */}
-        {/* <Route path="/" element={<Home />} /> */}
+        <Switch >
+          <Route path="/dashboard">
+            <Home />
+          </Route>
 
-        {/* <Route path="classRooms" element={<ClassRooms />} /> */}
-        {/* <ClassRooms /> */}
-        {/* <Docs/> */}
-        <Assignments/>
-        {/* </Switch> */}
-        {/* </BrowserRouter> */}
+          <Route path="/classroom">
+            <ClassRooms />
+          </Route>
+
+          <Route path="/docs">
+            <Docs />
+          </Route>
+
+          <Route path="/assignments" >
+            <Assignments />
+          </Route>
+        </Switch>
       </div>
     </div>
   );
