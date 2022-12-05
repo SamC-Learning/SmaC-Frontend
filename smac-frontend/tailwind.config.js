@@ -10,7 +10,7 @@ module.exports = {
         headerBGLight: "#53504D",
         backGround:"#262626",
         border:"#36415F",
-        cardText: "#B5BCCD"
+        cardText: "#B5BCCD",
         docsSideBar:"#1d1d1d",
         docOptions:"#565656",
         docSkeleton:"#454545"
